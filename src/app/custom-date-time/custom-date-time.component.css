@@ -1,7 +1,7 @@
 .mat-calendar-controls {
   margin: 0px;
 }
-.main {
+.custom-drp {
   width: 430px;
   padding: 10px;
   padding-top: 0px;
@@ -41,7 +41,7 @@
   left: 7px;
 }
 
-.main .mat-calendar-previous-button,
+.custom-drp .mat-calendar-previous-button,
 .mat-calendar-next-button {
   margin-right: 10px !important;
   /* margin-left: -78px !important; */
@@ -49,42 +49,42 @@
   color: #2e6bdc !important;
 }
 
-.main .mat-calendar-period-button {
+.custom-drp .mat-calendar-period-button {
   color: #2e6bdc !important;
 }
 
-.main .mat-calendar-arrow {
+.custom-drp .mat-calendar-arrow {
   fill: #2e6bdc !important;
 }
 
-/* .main .mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button{
+/* .custom-drp .mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button{
   color: #2e6bdc !important;
 } */
 
-.main .ampm {
+.custom-drp .ampm {
   border-radius: 50%;
   border: 1px solid #cfcfcf;
   text-align: center;
   padding: 6px;
 }
 
-.main .mat-calendar-body-in-range::before {
+.custom-drp .mat-calendar-body-in-range::before {
   background-color: #daefff !important;
 }
 
-.main .mat-calendar-body-selected {
+.custom-drp .mat-calendar-body-selected {
   background-color: #2e6bdc !important;
 }
 
-.main .down {
+.custom-drp .down {
   font-size: 30px;
   margin-top: -5px;
 }
-.main .up {
+.custom-drp .up {
   font-size: 30px;
   margin-bottom: -10px;
 }
 
-.main .mat-calendar-content {
+.custom-drp .mat-calendar-content {
   padding: 0 8px 0 8px !important;
 }
