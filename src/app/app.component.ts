@@ -22,9 +22,11 @@ export class AppComponent implements OnInit {
   }
   onClose(date: any) {
     this.enableCal = false;
-    let start_date = moment(date.start).format('MM/DD/YYYY HH:mm:ss');;
-    let end_date = moment(date.end).format('MM/DD/YYYY HH:mm:ss');
-    let setdate = start_date.concat('  ——  ', end_date);
+    this.start_date = date.start
+    this.end_date = date.end
+    let start_Date = moment(date.start).format('MM/DD/YYYY hh:mm:ss A');;
+    let end_Date = moment(date.end).format('MM/DD/YYYY hh:mm:ss A');
+    let setdate = start_Date.concat('  ——  ', end_Date);
     this. basicForm.get('time_display')?.setValue(setdate);
   }
   @HostListener('document:click', ['$event']) onDocumentClick() {
