@@ -1,0 +1,38 @@
+<div
+  fxFlex.gt-xs="66"
+  fxFlex.xs="100"
+  fxLayout="column"
+  class="outline-input no-label"
+  [formGroup]="basicForm"
+>
+  <label class="font-weight-normal">Date & Time For the Period </label>
+  <mat-form-field appearance="outline" fxFlex="100">
+    <input
+      readonly
+      matInput
+      placeholder="Select Date And Time Range"
+      formControlName="time_display"
+      [required]="true"
+      (click)="onClickCalendar($event)"
+    />
+    <mat-icon
+      matSuffix
+      (click)="onClickCalendar($event)"
+      style="cursor:pointer"
+    >
+      calendar_month
+    </mat-icon>
+  </mat-form-field>
+  <div
+    class="child"
+    style="position: absolute; left: 100px; top: 0px; z-index: 1; background-color: white;"
+    *ngIf="enableCal"
+    (click)="$event.stopPropagation()"
+  >
+    <app-custom-date-time
+      (close)="onClose($event)"
+      [startDate]="start_date"
+      [endDate]="end_date"
+    ></app-custom-date-time>
+  </div>
+</div>
