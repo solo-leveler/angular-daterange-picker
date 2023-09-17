@@ -1,7 +1,5 @@
-# angular-daterange-picker
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/stackblitz-starters-stb4s7)
 # Custom Angular Material DateRange Time Picker
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/stackblitz-starters-stb4s7)
 
 ### About the Project
 ---
