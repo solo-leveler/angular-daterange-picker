@@ -2,13 +2,16 @@
   <form [formGroup]="customDateTimeForm">
     <div fxLayout="row" fxLayoutGap="10px">
       <div fxLayout="column" fxFlex="55">
-        <mat-calendar (selectedChange)="_onSelectedChange($event)" [maxDate]="currDate"
-            [selected]="selectedDateRange">
+        <mat-calendar
+          (selectedChange)="_onSelectedChange($event)"
+          [maxDate]="currDate"
+          [selected]="selectedDateRange"
+        >
         </mat-calendar>
       </div>
 
       <div class="divider-right mr-10 ml-10"></div>
-      <div fxLayout="column"  fxFlex="45" fxLayoutGap="10px" *ngIf="hideTime">
+      <div fxLayout="column" fxFlex="45" fxLayoutGap="10px" *ngIf="hideTime">
         <div fxLayout="row" class="bold mt-25 ml-5">Time range</div>
         <div fxLayout="row">
           <div fxLayout="column">
@@ -18,35 +21,81 @@
                   <div class="start-dot"></div>
                   <div class="separator-right in-betw-distance"></div>
                 </div>
-                <div fxLayout="column" >
-                  <div class="mini-text primary-text bold">Start </div>
-                  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
-                    <div class="p1" fxLayout="column" fxLayoutAlign="space-between center">
+                <div fxLayout="column">
+                  <div class="mini-text primary-text bold">Start</div>
+                  <div
+                    fxLayout="row"
+                    fxLayoutAlign="center center"
+                    fxLayoutGap="5px"
+                  >
+                    <div
+                      class="p1"
+                      fxLayout="column"
+                      fxLayoutAlign="space-between center"
+                    >
                       <div class="up">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onCustomArrowUp('starthr')">keyboard_arrow_up</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onCustomArrowUp('starthr')"
+                          >keyboard_arrow_up</mat-icon
+                        >
                       </div>
 
                       <mat-form-field appearance="outline" style="width: 50px;">
-                        <input matInput maxlength="2" formControlName="starthr" (keypress)="timeLimitHour($event)" (input)="onKeyPress()" placeholder="HH" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"/>
+                        <input
+                          matInput
+                          maxlength="2"
+                          formControlName="starthr"
+                          (keypress)="timeLimitHour($event)"
+                          (input)="onKeyPress()"
+                          placeholder="HH"
+                          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        />
                       </mat-form-field>
                       <div class="down">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onArrowDown('starthr')">keyboard_arrow_down</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onArrowDown('starthr')"
+                          >keyboard_arrow_down</mat-icon
+                        >
                       </div>
-
                     </div>
                     <span>:</span>
-                    <div class="p1" fxLayout="column" fxLayoutAlign="space-between center">
+                    <div
+                      class="p1"
+                      fxLayout="column"
+                      fxLayoutAlign="space-between center"
+                    >
                       <div class="up">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onCustomArrowUp('startmn')">keyboard_arrow_up</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onCustomArrowUp('startmn')"
+                          >keyboard_arrow_up</mat-icon
+                        >
                       </div>
 
                       <mat-form-field appearance="outline" style="width: 50px;">
-                        <input matInput maxlength="2" formControlName="startmn" (keypress)="timeLimitMin($event)" (input)="onKeyPress()" placeholder="MM" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"/>
+                        <input
+                          matInput
+                          maxlength="2"
+                          formControlName="startmn"
+                          (keypress)="timeLimitMin($event)"
+                          (input)="onKeyPress()"
+                          placeholder="MM"
+                          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        />
                       </mat-form-field>
                       <div class="down">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onArrowDown('startmn')">keyboard_arrow_down</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onArrowDown('startmn')"
+                          >keyboard_arrow_down</mat-icon
+                        >
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -57,40 +106,85 @@
                 <div fxLayout="column" class="mt-5">
                   <div class="end-dot"></div>
                 </div>
-                <div fxLayout="column" >
+                <div fxLayout="column">
                   <div class="mini-text primary-text bold">End</div>
-                  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="5px">
-                    <div class="p1" fxLayout="column" fxLayoutAlign="space-between center">
+                  <div
+                    fxLayout="row"
+                    fxLayoutAlign="center center"
+                    fxLayoutGap="5px"
+                  >
+                    <div
+                      class="p1"
+                      fxLayout="column"
+                      fxLayoutAlign="space-between center"
+                    >
                       <div class="up">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onCustomArrowUp('endhr')">keyboard_arrow_up</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onCustomArrowUp('endhr')"
+                          >keyboard_arrow_up</mat-icon
+                        >
                       </div>
                       <mat-form-field appearance="outline" style="width: 50px;">
-                        <input matInput maxlength="2" formControlName="endhr" (keypress)="timeLimitHour($event)" (input)="onKeyPress()" placeholder="HH" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"/>
+                        <input
+                          matInput
+                          maxlength="2"
+                          formControlName="endhr"
+                          (keypress)="timeLimitHour($event)"
+                          (input)="onKeyPress()"
+                          placeholder="HH"
+                          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        />
                       </mat-form-field>
                       <div class="down">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onArrowDown('endhr')">keyboard_arrow_down</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onArrowDown('endhr')"
+                          >keyboard_arrow_down</mat-icon
+                        >
                       </div>
-
                     </div>
                     <span>:</span>
-                    <div class="p1" fxLayout="column" fxLayoutAlign="space-between center">
+                    <div
+                      class="p1"
+                      fxLayout="column"
+                      fxLayoutAlign="space-between center"
+                    >
                       <div class="up">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onCustomArrowUp('endmn')">keyboard_arrow_up</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onCustomArrowUp('endmn')"
+                          >keyboard_arrow_up</mat-icon
+                        >
                       </div>
 
                       <mat-form-field appearance="outline" style="width: 50px;">
-                        <input matInput maxlength="2" formControlName="endmn" (keypress)="timeLimitMin($event)" (input)="onKeyPress()" placeholder="MM" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"/>
+                        <input
+                          matInput
+                          maxlength="2"
+                          formControlName="endmn"
+                          (keypress)="timeLimitMin($event)"
+                          (input)="onKeyPress()"
+                          placeholder="MM"
+                          onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+                        />
                       </mat-form-field>
                       <div class="down">
-                        <mat-icon [inline]="true" class="ico-extra-small bold" (click)="onArrowDown('endmn')">keyboard_arrow_down</mat-icon>
+                        <mat-icon
+                          [inline]="true"
+                          class="ico-extra-small bold"
+                          (click)="onArrowDown('endmn')"
+                          >keyboard_arrow_down</mat-icon
+                        >
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -98,11 +192,28 @@
   </form>
   <div class="separator-bottom"></div>
   <div fxLayout="row" class="mt-10" fxLayoutAlign="space-between center">
-
-    <div class="bold ml-10" *ngIf="this.selectedDateRange?.start">{{this.selectedDateRange?.start ? formatDateTime(this.selectedDateRange?.start)  :''}} - {{this.selectedDateRange?.end ? formatDateTime(this.selectedDateRange?.end) :''}}</div>
-      <!-- <span class="primary-text">Cancel</span> -->
-      <button mat-raised-button class="primary-btn" [disabled]="btnDisable" (click)="onCustomConfirmClick()"
-        tabindex="1">Done</button>
-
+    <div class="bold ml-10" *ngIf="this.selectedDateRange?.start">
+      {{
+        this.selectedDateRange?.start
+          ? formatDateTime(this.selectedDateRange?.start)
+          : ''
+      }}
+      -
+      {{
+        this.selectedDateRange?.end
+          ? formatDateTime(this.selectedDateRange?.end)
+          : ''
+      }}
+    </div>
+    <!-- <span class="primary-text">Cancel</span> -->
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="btnDisable"
+      (click)="onCustomConfirmClick()"
+      tabindex="1"
+    >
+      Done
+    </button>
   </div>
 </div>
