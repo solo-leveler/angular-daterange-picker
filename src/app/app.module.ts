@@ -14,10 +14,12 @@ import {
 } from '@angular/material-moment-adapter';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    MatFormFieldModule,
     MatIconModule,
     MatDatepickerModule,
     ReactiveFormsModule,
