@@ -3,7 +3,7 @@
 
 ### About the Project
 ---
-Custom Angular Material DateRange Time Picker using Angular. 
+Custom Angular Material DateRange Time Picker. 
 
 A custom daterange picker using angular material, moment.js and flex-layout.
 ### Overview 
